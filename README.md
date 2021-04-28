@@ -29,7 +29,375 @@ be</a>
 <html>
 <head>
   <title>Arthika Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    @charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Navigation section */
+
+.nav {
+  background-color: #248b7a;
+  padding: 20px;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  font-weight: bold;
+}
+
+.nav-ul li > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-ul li {
+  margin-left: 40px;
+}
+
+/* Hero section */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #c6f1ea;
+  min-height: 25rem;
+}
+
+.hero__title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #248b7a;
+}
+
+.hero__subtitle {
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #248b7a;
+}
+
+.hero__social {
+  font-size: 2.5rem;
+  color: #248b7a;
+}
+.hero__social .fab {
+  margin-top: 20px;
+  margin-left: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero__social .fab:hover {
+  transform: scale(1.1);
+}
+
+.hero__social > a {
+  text-decoration: none;
+  color: #248b7a;
+}
+
+/* About section  */
+
+#about {
+  min-height: 25rem;
+}
+
+#about > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #248b7a;
+  margin: 2.5rem 1.875rem;
+}
+
+.about__row {
+  display: flex;
+  flex-direction: row;
+  margin: 3.125rem 3.125rem;
+}
+
+.about__col-2--avatar {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.about__col-2--avatar img {
+  border-radius: 50%;
+  width: 200px;
+  margin-left: 50px;
+}
+
+.about__col-2--txt p {
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+}
+
+/* project section */
+
+#projects {
+  min-height: 50rem;
+  background: #c6f1ea;
+  padding-bottom: 1.25rem;
+}
+
+#projects > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #248b7a;
+  padding-top: 3.125rem;
+}
+
+.projects__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3.125rem 3.125rem;
+}
+
+.projects__col-2--project-img {
+  flex-basis: 40%;
+  min-width: 18.75rem;
+}
+
+.projects__col-2--project-img img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 14px 10px 42px -5px rgba(192, 186, 186, 0.79);
+}
+
+.projects__col-2--title {
+  width: 37.5rem;
+}
+.projects__col-2--title h2 {
+  text-align: center;
+  color: #248b7a;
+}
+
+.projects__col-2--title p {
+  font-size: 1.125rem;
+  line-height: 1.563rem;
+  text-align: left;
+}
+
+.projects--github-link a {
+  display: inline-block;
+  margin-top: 20px;
+  padding-left: 150px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #248b7a;
+}
+
+/* contact section */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  min-height: 11rem;
+}
+
+.contact__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #248b7a;
+}
+
+.contact__email {
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+}
+
+.contact__email a {
+  text-decoration: none;
+  color: #248b7a;
+  font-weight: bold;
+}
+
+/* footer section */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 18rem;
+  background: #c6f1ea;
+}
+
+.footer__nav {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 3.75rem;
+}
+.footer__nav--ul li {
+  display: inline-block;
+  margin-left: 1.875rem;
+}
+
+.footer__nav--ul a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #248b7a;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+}
+
+.footer__social {
+  text-align: center;
+  font-size: 2rem;
+  color: #248b7a;
+}
+
+.linkedin{
+  height: 30px;
+}
+
+.footer__social .fab {
+  margin-top: 20px;
+  margin-left: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer__social .fab:hover {
+  transform: scale(1.1);
+}
+
+.footer__social > a {
+  text-decoration: none;
+  color: #248b7a;
+}
+
+/* media queries */
+
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+  /* About section  */
+
+  #about > h1 {
+    display: none;
+  }
+
+  .about__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3.125rem 3.125rem;
+  }
+
+  .about__col-2--avatar img {
+    border-radius: 50%;
+    width: 160px;
+    margin-left: 13.75rem;
+    margin-top: -6.875rem;
+  }
+
+  .about__col-2--txt p {
+    margin-top: 1.875rem;
+    font-size: 1.125rem;
+    line-height: 1.563rem;
+  }
+
+  /* project section */
+
+  .projects__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.125rem 3.125rem;
+  }
+
+  .projects__col-2--project-img {
+    flex-basis: 40%;
+    min-width: 18.75rem;
+    order: 1;
+    margin-left: 150px;
+    margin-top: 20px;
+  }
+
+  .projects__col-2--project-img img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 14px 10px 42px -5px rgba(192, 186, 186, 0.79);
+  }
+}
+
+/* 
+ Mostly all smartphones
+*/
+
+@media (max-width: 576px) {
+  #about > h1 {
+    display: none;
+  }
+
+  .about__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 3.125rem 3.125rem;
+  }
+
+  .about__col-2--avatar img {
+    border-radius: 50%;
+    width: 160px;
+    margin-left: 8.75rem;
+    margin-top: -6.875rem;
+  }
+
+  .about__col-2--txt p {
+    margin-top: 1.875rem;
+    font-size: 1.125rem;
+    line-height: 1.563rem;
+  }
+
+  /* project section */
+
+  .projects__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.125rem 3.125rem;
+  }
+
+  .projects__col-2--project-img {
+    flex-basis: 40%;
+    min-width: 18.75rem;
+    order: 1;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+
+  .projects__col-2--project-img img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 14px 10px 42px -5px rgba(192, 186, 186, 0.79);
+  }
+}
+
+  </style>
 </head>
 <body>
 <!-- header section -->
